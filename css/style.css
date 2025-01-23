@@ -428,7 +428,14 @@ form textarea:focus {
 	color: var(--main-color);
 }
 
-
+.typing-container {
+	display: flex;
+	flex-direction: row; /* يكون في صف واحد بشكل افتراضي */
+	align-items: center;
+	flex-wrap: wrap; /* يلف العناصر إلى سطر جديد عند الحاجة */
+	justify-content: center;
+	gap: 10px; /* مسافة بين العناصر */
+  }
 
 /* Responsive */
 

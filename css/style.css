@@ -492,6 +492,8 @@ form textarea:focus {
 	#menu-icon {
 		display: block;
 	}
+	
+
 	.home-text h3 {
 		
 		margin-bottom: 1rem;
@@ -525,7 +527,10 @@ form textarea:focus {
 	
 }
 @media (max-width: 370px) {
-	
+	.home-text h1 {
+		
+		width: 75%;
+	}
 	.portfolio-content {
 		display: block;
 	}

@@ -170,12 +170,16 @@ section {
 	color: var(--main-color);
 	font-size: 24px;
 	font-weight: 600;
-	transition: all 0.3s ease;
+	/* transition: all 0.3s ease; */
 	letter-spacing: 2px;
+	/* -webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease; */
 }
 
 .home-text h4:hover {
-	transform: scale(1.1);
+	/* transform: scale(1.1); */
 	text-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
 }
 
@@ -612,7 +616,7 @@ header.sticky {
 }
 
 .contact-text h4 {
-	margin: 15px 0;
+	margin: 15px 22px 15px 5px;
 	color: var(--main-color);
 	font-size: 20px;
 	font-weight: 700;

@@ -785,7 +785,7 @@ export default function Home() {
       <section id="contact" className="contact">
         <div className="contact-text" data-aos="fade-right">
           <h2>Contact Me</h2>
-          <h4 style={{marginLeft:"5px"}}>My Contact Details</h4>
+          <h4 className="">My Contact Details</h4>
           <ul className="contact-list">
             <li>
               <i className="bx bx-map" /> Maadi, Cairo, Egypt

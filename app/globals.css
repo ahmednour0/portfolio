@@ -288,9 +288,9 @@ header.sticky {
 	animation: sectionTitleAura 2.4s ease-in-out infinite alternate;
 }
 
-.about-content h2:hover {
+/* .about-content h2:hover {
 	color: var(--main-color);
-}
+} */
 
 .about-content p {
 	color: var(--second-color);

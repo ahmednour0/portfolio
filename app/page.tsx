@@ -662,7 +662,7 @@ export default function Home() {
 
   return (
     <>
-      <header className={isSticky ? "sticky" : ""}>
+      <header className={isSticky ? "sticky" : ""} >
         <a href="#home" className="logo">
           <span>P</span>ortfolio
         </a>
@@ -671,6 +671,7 @@ export default function Home() {
           className={`bx ${menuOpen ? "bx-x" : "bx-menu"}`}
           id="menu-icon"
           onClick={() => setMenuOpen((prev) => !prev)}
+          data-aos="fade-down" data-aos-duration="500"
         />
 
         <ul className={`navbar ${menuOpen ? "active" : ""}`}>

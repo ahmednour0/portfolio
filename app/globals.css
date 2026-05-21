@@ -1079,3 +1079,14 @@ form textarea:focus {
 		margin-bottom: 20px;
 	}
 }
+
+/* Medium and large screens: Prevent h1 from wrapping */
+@media (min-width: 800px) {
+	.home-text {
+		width: 100%;
+	}
+
+	.home-text h1 {
+		white-space: nowrap;
+	}
+}

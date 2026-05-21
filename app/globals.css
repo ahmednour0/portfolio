@@ -12,6 +12,7 @@
 
 html {
 	scroll-padding-top: 95px;
+	overflow-x: hidden;
 }
 
 :root {
@@ -28,6 +29,8 @@ html {
 body {
 	background: var(--bg-color);
 	color: var(--text-color);
+	width: 100%;
+	overflow-x: hidden;
 }
 
 body[data-page-restoring] [data-aos] {
@@ -41,9 +44,11 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
 	position: fixed;
+	left: 0;
 	right: 0;
 	top: 0;
 	width: 100%;
+	max-width: 100vw;
 	z-index: 1000;
 	display: flex;
 	align-items: center;
@@ -128,6 +133,13 @@ section {
 .home-text {
 	position: relative;
 	z-index: 1;
+	width: min(100%, 42rem);
+}
+
+.home-text h3 img {
+	display: block;
+	max-width: min(100%, 22rem);
+	height: auto;
 }
 
 .home-text h1 {
@@ -327,7 +339,7 @@ header.sticky {
 
 .services-content {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
 	align-items: center;
 	text-align: center;
 	gap: 2rem;
@@ -345,7 +357,7 @@ header.sticky {
 	border-radius: 0.5rem;
 	transition: all 0.4s ease-in-out;
 	cursor: pointer;
-	width: 70%;
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -415,7 +427,7 @@ header.sticky {
 
 .portfolio-content {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, auto));
+	grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
 	align-items: center;
 	gap: 2rem;
 	margin-top: 5rem;
@@ -970,8 +982,35 @@ form textarea:focus {
 		--paragraph-font: 1rem;
 	}
 
+	header {
+		padding: 14px 1rem;
+	}
+
+	.logo {
+		max-width: calc(100% - 4rem);
+		font-size: 1.45rem;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
 	#menu-icon {
 		display: block;
+		font-size: 2.35rem;
+		flex-shrink: 0;
+	}
+
+	.home-text {
+		width: 100%;
+	}
+
+	.home-text h1 {
+		font-size: clamp(2.6rem, 12vw, 3.7rem);
+	}
+
+	.home-text h4 {
+		font-size: 1rem;
+		letter-spacing: 1px;
 	}
 
 	.home-text h3 {
@@ -987,6 +1026,8 @@ form textarea:focus {
 		top: 100%;
 		right: 0;
 		left: 0;
+		width: 100%;
+		max-width: 100vw;
 		display: flex;
 		flex-direction: column;
 		background: var(--other-color);
@@ -1027,7 +1068,7 @@ form textarea:focus {
 
 @media (max-width: 370px) {
 	.home-text h1 {
-		width: 75%;
+		width: auto;
 	}
 
 	.portfolio-content {

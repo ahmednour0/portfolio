@@ -579,7 +579,6 @@ export default function Home() {
       setMenuOpen(false);
     };
 
-    handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);

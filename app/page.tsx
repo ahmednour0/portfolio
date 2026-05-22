@@ -662,27 +662,33 @@ export default function Home() {
 
   return (
     <>
-      <header className={isSticky ? "sticky" : ""} >
-        <a href="#home" className="logo">
-          <span>P</span>ortfolio
-        </a>
-
+      <header className={isSticky ? "sticky" : ""}>
         <div
-          className={`bx ${menuOpen ? "bx-x" : "bx-menu"}`}
-          id="menu-icon"
-          onClick={() => setMenuOpen((prev) => !prev)}
-          data-aos="fade-down" data-aos-duration="500"
-        />
+          className="header-content"
+          data-aos="fade-down"
+          data-aos-duration="700"
+          data-aos-once="true"
+        >
+          <a href="#home" className="logo">
+            <span>P</span>ortfolio
+          </a>
 
-        <ul className={`navbar ${menuOpen ? "active" : ""}`}>
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <a href={item.href} onClick={() => setMenuOpen(false)}>
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+          <div
+            className={`bx ${menuOpen ? "bx-x" : "bx-menu"}`}
+            id="menu-icon"
+            onClick={() => setMenuOpen((prev) => !prev)}
+          />
+
+          <ul className={`navbar ${menuOpen ? "active" : ""}`}>
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a href={item.href} onClick={() => setMenuOpen(false)}>
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </header>
 
       <section className="home" id="home">

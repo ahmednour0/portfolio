@@ -11,7 +11,7 @@ export default function Template() {
   return (
     <section className="portfolio" id="template">
       <div className="heading" data-aos="fade-up" data-aos-duration="1500">
-        <h2>My Template</h2>
+        <h2>My Templates</h2>
       </div>
       <div className="portfolio-content">
         <div className="port" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100" data-aos-anchor-placement="top-bottom">

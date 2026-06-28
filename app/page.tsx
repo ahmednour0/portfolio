@@ -780,7 +780,7 @@ export default function Home() {
         </div>
       </section>
       <section className="portfolio" id="template" >
-        <SectionHeading title="My Template" />
+        <SectionHeading title="My Templates" />
         <div className="portfolio-content" >
           {templateProjects.map((project, index) => (
             <ProjectCard project={project} key={project.title} animation="fade-up" delay={(index + 1) * 120} />
